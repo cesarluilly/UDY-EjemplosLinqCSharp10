@@ -10,6 +10,9 @@ namespace CursoLINQ.Modulo_6
     {
         public void Ejemplo()
         {
+            //**********************************************//
+            Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
+
             var personas = new List<Persona>() {
                     new Persona { Nombre = "Eduardo",Edad = 19, Soltero = true },
                     new Persona { Nombre = "Nidia", Edad = 25, Soltero = true },

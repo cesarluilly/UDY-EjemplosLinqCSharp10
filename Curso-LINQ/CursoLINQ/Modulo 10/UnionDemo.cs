@@ -10,11 +10,14 @@ namespace CursoLINQ.Modulo_10
     {
         public void Ejemplo()
         {
+            //**********************************************//
+            Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
+
             var personasA = new List<Persona>() {
-new Persona { Nombre = "Eduardo", EmpresaId = 1, },
-new Persona { Nombre = "Nidia",  EmpresaId = 1 },
-new Persona { Nombre = "Esmerlin", EmpresaId = 3 }
-};
+                new Persona { Nombre = "Eduardo", EmpresaId = 1, },
+                new Persona { Nombre = "Nidia",  EmpresaId = 1 },
+                new Persona { Nombre = "Esmerlin", EmpresaId = 3 }
+                };
 
             var personasB = new List<Persona>()
             {

@@ -10,6 +10,9 @@ namespace CursoLINQ.Modulo_7
     {
         public void Ejemplo()
         {
+            //**********************************************//
+            Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
+
             int[] numeros = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 3, 2, 1 };
 
             // Tomar los elementos mientras el predicado sea true.

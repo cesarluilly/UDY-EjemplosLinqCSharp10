@@ -10,6 +10,9 @@ namespace CursoLINQ.Modulo_11
     {
         public void Ejemplo()
         {
+            //**********************************************//
+            Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
+
             int[] A = { 1, 2, 3 };
             int[] B = { 4, 5, 6 };
 

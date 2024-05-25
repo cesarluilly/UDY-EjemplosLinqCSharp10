@@ -10,6 +10,9 @@ namespace CursoLINQ.Modulo_2
     {
         public void Ejemplo()
         {
+            //**********************************************//
+            Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
+
             int[] numeros = Enumerable.Range(1, 20).ToArray();
 
             var numerosImpares = numeros.Where(n => n % 2 == 1).ToList();

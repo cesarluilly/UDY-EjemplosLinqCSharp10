@@ -10,6 +10,9 @@ namespace CursoLINQ.Modulo_5
     {
         public void Ejemplo()
         {
+            //**********************************************//
+            Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
+
             var numeros = Enumerable.Range(1, 5);
 
             var resultado = numeros.Aggregate((a, b) => a * b); // 1x2x3x4x5

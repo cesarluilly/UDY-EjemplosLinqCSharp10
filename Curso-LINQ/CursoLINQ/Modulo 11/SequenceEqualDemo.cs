@@ -10,6 +10,9 @@ namespace CursoLINQ.Modulo_11
     {
         public void Ejemplo()
         {
+            //**********************************************//
+            Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
+
             string[] A = { "felipe", "fernando" };
 
             string[] B = { "felipe", "fernando" };

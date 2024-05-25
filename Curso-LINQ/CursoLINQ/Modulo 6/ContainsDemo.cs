@@ -10,6 +10,9 @@ namespace CursoLINQ.Modulo_6
     {
         public void Ejemplo()
         {
+            //**********************************************//
+            Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
+
             var numeros = Enumerable.Range(1, 5);
 
             var estaElNumero3 = numeros.Contains(3);
