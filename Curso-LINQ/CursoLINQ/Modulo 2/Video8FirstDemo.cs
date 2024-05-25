@@ -40,11 +40,11 @@ namespace CursoLINQ.Modulo_2
             //**********************************************//
             Console.WriteLine("**Ejemplo 2: Probando cuando el arreglo esta vacio **");
 
-            var paises = new List<string>();
+            List<string> paises = new List<string>();
             try
             {
                 //                                          //Va a mandar un error ya que el arreglo esta vacio.
-                var primerPais = paises.First();
+                string primerPais = paises.First();
             }
             catch (Exception ex)
             {
@@ -52,19 +52,19 @@ namespace CursoLINQ.Modulo_2
             }
 
             //                                              //Va a mandar el valor por defecto, en este caso sera null.
-            var primerPais2 = paises.FirstOrDefault();
+            string primerPais2 = paises.FirstOrDefault();
 
             //**********************************************//
             Console.WriteLine("**Ejemplo 3: Probando con el valor por default de un entero**");
-            var numeros = new List<int>();
-            var primerNumero = numeros.FirstOrDefault();
+            List<int> numeros = new List<int>();
+            int primerNumero = numeros.FirstOrDefault();
 
             //**********************************************//
             Console.WriteLine("**Ejemplo 4: Sintaxis Metodo y Sintaxis Query**");
-            var primeraPersonaNoSoltera = personas.FirstOrDefault(p => !p.Soltero);
+            Persona primeraPersonaNoSoltera = personas.FirstOrDefault(p => !p.Soltero);
 
             // Sintaxis de queries
-            var primeraPersonaNoSoltera_2 = (from p in personas
+            Persona primeraPersonaNoSoltera_2 = (from p in personas
                                              where !p.Soltero
                                              select p).FirstOrDefault();
         }
