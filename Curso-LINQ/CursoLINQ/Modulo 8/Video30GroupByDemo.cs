@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_8
 {
-    public class GroupByDemo
+    public class Video30GroupByDemo
     {
         public void Ejemplo()
         {

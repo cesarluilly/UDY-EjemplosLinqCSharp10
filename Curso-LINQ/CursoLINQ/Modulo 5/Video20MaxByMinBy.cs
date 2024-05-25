@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_5
 {
-    public class MaxByMinBy
+    public class Video20MaxByMinBy
     {
         public void Ejemplo()
         {

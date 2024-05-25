@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_9
 {
-    public class GroupJoinDemo
+    public class Video32JoinDemo
     {
         public void Ejemplo()
         {
@@ -28,31 +28,27 @@ namespace CursoLINQ.Modulo_9
             {
                 new Empresa{Id = 1, Nombre = "Electrodomésticos Felipe"},
                 new Empresa{Id = 2, Nombre = "Bicicletas Valentina"},
-                new Empresa{Id = 3, Nombre = "Gimnasio Esmerlin"},
-                new Empresa{Id = 4, Nombre = "Ferreteria Lorenzo"}
+                new Empresa{Id = 3, Nombre = "Gimnasio Esmerlin"}
             };
 
-            var empresasYSusEmpleados = empresas.GroupJoin(personas, e => e.Id, p => p.EmpresaId,
-                (empresa, personas) => new { Empresa = empresa, Personas = personas });
+            var personasYEmpresas = personas.Join(empresas, p => p.EmpresaId, e => e.Id, (persona, empresa) => new
+            {
+                Persona = persona,
+                Empresa = empresa
+            });
 
             // Sintaxis de queries
-            var empresasYSusEmpleados_2 = from empresa in empresas
-                                          join persona in personas
-                                          on empresa.Id equals persona.EmpresaId into personas2
-                                          select new
-                                          {
-                                              Empresa = empresa,
-                                              Personas = personas2
-                                          };
+            var personasYEmpresas_2 = from persona in personas
+                                      join empresa in empresas on persona.EmpresaId equals empresa.Id
+                                      select new
+                                      {
+                                          Persona = persona,
+                                          Empresa = empresa
+                                      };
 
-            foreach (var item in empresasYSusEmpleados_2)
+            foreach (var item in personasYEmpresas_2)
             {
-                Console.WriteLine($"Las siguientes personas trabajan en {item.Empresa.Nombre}");
-
-                foreach (var persona in item.Personas)
-                {
-                    Console.WriteLine($"-{persona.Nombre}");
-                }
+                Console.WriteLine($"{item.Persona.Nombre} trabaja en {item.Empresa.Nombre}");
             }
 
         }

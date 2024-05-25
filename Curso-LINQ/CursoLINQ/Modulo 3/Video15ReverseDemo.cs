@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_3
 {
-    public class ReverseDemo
+    public class Video15ReverseDemo
     {
         public void Ejemplo()
         {

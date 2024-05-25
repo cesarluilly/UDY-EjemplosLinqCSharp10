@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_7
 {
-    public class TakeWhileSkipWhile
+    public class Video29TakeWhileSkipWhile
     {
         public void Ejemplo()
         {

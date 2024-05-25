@@ -76,9 +76,17 @@ Sirve para extraer de una lista que tiene diferentes tipos de objetos, solo un t
 
 ## Seccion 3: Ordenando Elementos
 
+![1716675318892](image/README/1716675318892.png)
+
+![1716675384875](image/README/1716675384875.png)
+
 ### Video 13 OrdeyBy y OrderByDescending
+* Si queremos ordenar por 2 atributos, utilizamos OrderBy y despues ThenBy
 
 ### Video 14 ThenBy y ThenByDescending
+
+![1716675788827](image/README/1716675788827.png)
+![1716675749072](image/README/1716675749072.png)
 
 ### Video 15 Reverse
 

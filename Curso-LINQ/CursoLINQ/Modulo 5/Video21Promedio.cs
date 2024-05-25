@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_5
 {
-    public class SumMaxMin
+    public class Video21Promedio
     {
         public void Ejemplo()
         {
@@ -23,11 +23,10 @@ namespace CursoLINQ.Modulo_5
 
             var numeros = Enumerable.Range(1, 5);
 
-            Console.WriteLine($"La suma de los numeros es {numeros.Sum()}");
-            Console.WriteLine($"La suma de los numeros es {personas.Sum(p => p.Edad)}");
+            Console.WriteLine($"El promedio de los números es {numeros.Average()}");
 
-            Console.WriteLine($"La edad máxima de las personas es {personas.Max(x => x.Edad)}");
-            Console.WriteLine($"La edad mínima de las personas es {personas.Min(x => x.Edad)}");
+            Console.WriteLine($"El promedio de las edades es {personas.Average(p => p.Edad)}");
+
         }
     }
 }

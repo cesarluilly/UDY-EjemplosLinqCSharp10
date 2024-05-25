@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_7
 {
-    public class Paginacion
+    public class Video28Paginacion
     {
         public void Ejemplo()
         {
