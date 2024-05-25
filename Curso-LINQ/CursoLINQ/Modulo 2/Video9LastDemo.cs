@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace CursoLINQ.Modulo_2
         public void Ejemplo()
         {
             //**********************************************//
+            //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
             var personas = new List<Persona>() {
             new Persona { Nombre = "Eduardo", Edad = 30, FechaIngresoALaEmpresa = new DateTime(2021, 1, 2), Soltero = true },
@@ -20,16 +22,21 @@ namespace CursoLINQ.Modulo_2
             new Persona { Nombre = "Roberto", Edad = 61, FechaIngresoALaEmpresa = DateTime.Now.AddDays(-1), Soltero = false },
             };
 
-            var ultimaPersona = personas.Last();
-            var ultimaPersona2 = personas.LastOrDefault();
-            var ultimaPersonaSoltera = personas.Last(p => p.Soltero);
+            //**********************************************//
+            Console.WriteLine("**Ejemplo 1: **");
+
+            //                                              //Funciona de forma similar que first o firstOrDefault, 
+            //                                              //    solo que aqui se refiere al ultimo elemento.
+            //                                              //En cuanto a last, en caso de no encontrar un valor va a
+            //                                              //    tronar.
+            Persona ultimaPersona = personas.Last();
+            Persona ultimaPersona2 = personas.LastOrDefault();
+            Persona ultimaPersonaSoltera = personas.Last(p => p.Soltero);
 
             // Sintaxis de queries
-            var ultimaPersonaSoltera_2 = (from p in personas
+            Persona ultimaPersonaSoltera_2 = (from p in personas
                                           where p.Soltero
                                           select p).Last();
-
-            var a = 1;
         }
     }
 }

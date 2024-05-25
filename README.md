@@ -39,9 +39,12 @@ Por lo tanto LinQ, es eficiente en el tema de ejecucion diferida
 * Otros ejemplos y sintaxis Metodo y Query
     * ![1716644647405](image/README/1716644647405.png)
 ### Video 9 Last y LastOrDefault
+* Ejemplo 1
+    * ![1716647889041](image/README/1716647889041.png)
 
 ### Video 10 ElementAt y ElementAtOrDefault
-
+* Ejemplo 1 
+    * ![1716647836286](image/README/1716647836286.png)
 ### Video 11 Single y SingleOrDefault
 
 ### Video 12 Filtrando por tipo - OfType

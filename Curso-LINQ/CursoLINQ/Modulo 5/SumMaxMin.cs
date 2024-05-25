@@ -11,6 +11,7 @@ namespace CursoLINQ.Modulo_5
         public void Ejemplo()
         {
             //**********************************************//
+            //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
             var personas = new List<Persona>() {

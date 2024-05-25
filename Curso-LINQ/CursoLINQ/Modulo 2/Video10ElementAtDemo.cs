@@ -11,6 +11,7 @@ namespace CursoLINQ.Modulo_2
         public void Ejemplo()
         {
             //**********************************************//
+            //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
             var personas = new List<Persona>() {
@@ -21,6 +22,8 @@ namespace CursoLINQ.Modulo_2
     new Persona { Nombre = "Roberto", Edad = 61, FechaIngresoALaEmpresa = DateTime.Now.AddDays(-1), Soltero = false },
 };
 
+            //                                              //Tambien podemos buscar un elemento en un lugar
+            //                                              //    en un lugar especifico, el indice empieza con zero.
             var terceraPersona = personas.ElementAt(2);
             var sextaPersona = personas.ElementAtOrDefault(5);
 

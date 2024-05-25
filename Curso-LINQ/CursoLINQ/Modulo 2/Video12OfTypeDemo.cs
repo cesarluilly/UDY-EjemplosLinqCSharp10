@@ -11,6 +11,7 @@ namespace CursoLINQ.Modulo_2
         public void Ejemplo()
         {
             //**********************************************//
+            //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
             var listado = new List<object>() { "Felipe", 1, 2, "Claudia", true };
