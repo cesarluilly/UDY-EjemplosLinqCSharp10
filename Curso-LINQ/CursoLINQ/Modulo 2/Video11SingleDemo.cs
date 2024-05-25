@@ -21,30 +21,70 @@ namespace CursoLINQ.Modulo_2
     new Persona { Nombre = "Valentina", Edad = 24, FechaIngresoALaEmpresa = new DateTime(2021, 7, 8), Soltero = false },
     new Persona { Nombre = "Roberto", Edad = 61, FechaIngresoALaEmpresa = DateTime.Now.AddDays(-1), Soltero = false },
 };
-
-            var personasMayorDe60 = personas.Single(p => p.Edad > 60);
+            //**********************************************//
+            Console.WriteLine("**Ejemplo 1**");
+            //                                              //Solo hay un elemento, por lo tanto no va a dar ningun error.
+            Persona personasMayorDe60 = personas.Single(p => p.Edad > 60);
 
             // Sintaxis de queries
-            var personaMayorDe60_2 = (from p in personas
+            Persona personaMayorDe60_2 = (from p in personas
                                       where p.Edad > 60
                                       select p).Single();
 
+            //**********************************************//
+            Console.WriteLine("**Ejemplo 2: Con Single**");
+            Persona personaMayorA100 = null;
+            bool boolHuboError1 = false;
             try
             {
-                var personaMayorA100 = personas.Single(p => p.Edad > 100);
+                personaMayorA100 = personas.Single(p => p.Edad > 100);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Hubo un error, arreglo vacío");
+                boolHuboError1 = true;
             }
 
+            //**********************************************//
+            Console.WriteLine("**Ejemplo 3: Con SingleOrDefault**");
+            Persona personaMayor5 = null;
+            bool boolHuboError2 = false;
             try
             {
-                var personaMayor5 = personas.SingleOrDefault(p => p.Edad > 5);
+                personaMayor5 = personas.SingleOrDefault(p => p.Edad > 5);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Hubo otro error, arreglo con mas de un elemento");
+                boolHuboError2 = true;
+            }
+
+            //**********************************************//
+            Console.WriteLine("**Ejemplo 4: Con SingleOrDefault**");
+            Persona personaMayor60 = null;
+            bool boolHuboError3 = false;
+            try
+            {
+                personaMayor60 = personas.SingleOrDefault(p => p.Edad > 60);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hubo otro error");
+                boolHuboError3 = true;
+            }
+
+            //**********************************************//
+            Console.WriteLine("**Ejemplo 5: Con SingleOrDefault**");
+            Persona personaMayor100 = null;
+            bool boolHuboError4 = false;
+            try
+            {
+                personaMayor100 = personas.SingleOrDefault(p => p.Edad > 100);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hubo otro error");
+                boolHuboError3 = true;
             }
 
         }

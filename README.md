@@ -43,9 +43,20 @@ Por lo tanto LinQ, es eficiente en el tema de ejecucion diferida
     * ![1716647889041](image/README/1716647889041.png)
 
 ### Video 10 ElementAt y ElementAtOrDefault
+Aqui aplica lo mismo, para ElementAt en caso de que no lo encuentre va a mandar un error, 
+por lo tanto ElementAtOrDefault en caso de que no encuentre el elemento, va a mandar el valor por default
 * Ejemplo 1 
     * ![1716647836286](image/README/1716647836286.png)
 ### Video 11 Single y SingleOrDefault
+
+* Esta instruccion permite verficar que la coleccion en base al criterio de busquedad, solo tenga un elemento.
+    * Single: si tiene mas de un elemento va a mandar un error
+    * SingleOrDefault: si tiene mas de un elemento, solo va a mandar null
+
+* Ejemplo 1
+    * ![1716649143959](image/README/1716649143959.png)
+    * ![1716649170316](image/README/1716649170316.png)
+
 
 ### Video 12 Filtrando por tipo - OfType
 
