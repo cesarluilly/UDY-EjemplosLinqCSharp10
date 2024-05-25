@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_2
 {
-    public class WhereDemo
+    public class Video6WhereDemo
     {
         public void Ejemplo()
         {

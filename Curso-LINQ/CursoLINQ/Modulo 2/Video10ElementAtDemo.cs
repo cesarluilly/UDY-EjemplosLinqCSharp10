@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_2
 {
-    public class ElementAtDemo
+    public class Video10ElementAtDemo
     {
         public void Ejemplo()
         {

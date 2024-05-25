@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_2
 {
-    public class FirstDemo
+    public class Video9LastDemo
     {
         public void Ejemplo()
         {
@@ -18,30 +18,16 @@ namespace CursoLINQ.Modulo_2
     new Persona { Nombre = "Roberto", Edad = 61, FechaIngresoALaEmpresa = DateTime.Now.AddDays(-1), Soltero = false },
 };
 
-            var primeraPersona = personas.First();
-            var primeraPersona2 = personas.FirstOrDefault();
-
-            var paises = new List<string>();
-            try
-            {
-                var primerPais = paises.First();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("ha ocurrido un error");
-            }
-
-            var primerPais2 = paises.FirstOrDefault();
-
-            var numeros = new List<int>();
-            var primerNumero = numeros.FirstOrDefault();
-
-            var primeraPersonaNoSoltera = personas.FirstOrDefault(p => !p.Soltero);
+            var ultimaPersona = personas.Last();
+            var ultimaPersona2 = personas.LastOrDefault();
+            var ultimaPersonaSoltera = personas.Last(p => p.Soltero);
 
             // Sintaxis de queries
-            var primeraPersonaNoSoltera_2 = (from p in personas
-                                             where !p.Soltero
-                                             select p).FirstOrDefault();
+            var ultimaPersonaSoltera_2 = (from p in personas
+                                          where p.Soltero
+                                          select p).Last();
+
+            var a = 1;
         }
     }
 }

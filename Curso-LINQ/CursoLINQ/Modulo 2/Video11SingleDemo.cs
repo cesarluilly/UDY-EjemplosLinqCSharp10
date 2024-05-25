@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_2
 {
-    public class LastDemo
+    public class Video11SingleDemo
     {
         public void Ejemplo()
         {
+
             var personas = new List<Persona>() {
     new Persona { Nombre = "Eduardo", Edad = 30, FechaIngresoALaEmpresa = new DateTime(2021, 1, 2), Soltero = true },
     new Persona { Nombre = "Nidia", Edad = 19, FechaIngresoALaEmpresa = new DateTime(2015, 11, 22), Soltero = true },
@@ -18,16 +19,31 @@ namespace CursoLINQ.Modulo_2
     new Persona { Nombre = "Roberto", Edad = 61, FechaIngresoALaEmpresa = DateTime.Now.AddDays(-1), Soltero = false },
 };
 
-            var ultimaPersona = personas.Last();
-            var ultimaPersona2 = personas.LastOrDefault();
-            var ultimaPersonaSoltera = personas.Last(p => p.Soltero);
+            var personasMayorDe60 = personas.Single(p => p.Edad > 60);
 
             // Sintaxis de queries
-            var ultimaPersonaSoltera_2 = (from p in personas
-                                          where p.Soltero
-                                          select p).Last();
+            var personaMayorDe60_2 = (from p in personas
+                                      where p.Edad > 60
+                                      select p).Single();
 
-            var a = 1;
+            try
+            {
+                var personaMayorA100 = personas.Single(p => p.Edad > 100);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hubo un error, arreglo vacío");
+            }
+
+            try
+            {
+                var personaMayor5 = personas.SingleOrDefault(p => p.Edad > 5);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hubo otro error, arreglo con mas de un elemento");
+            }
+
         }
     }
 }
