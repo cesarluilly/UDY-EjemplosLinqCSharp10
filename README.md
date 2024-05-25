@@ -1,4 +1,14 @@
 # UDY-EjemplosLinqCSharp10
+## Apuntos cesar
+* Formas correctas de utiliza var
+    * Solo para cuando hay muchas invocaciones seguidas, esto es mas utilizado para cosas que no tienen mucho sentido y significado
+        * Esto solo ayuda para eficientar el codigo
+        * ![1716673046545](image/README/1716673046545.png)
+
+* Aun asi en la mayoria de los casos, hay que evitar el uso de var, ya que al inicio puede ser rapido escribirlo, pero si vuelves a leer el codigo ya te resulta complejo entenderle, pero para el mantenimiento no sirve en absoluto, el uso de var solo lo hacen personas egoistas que solo buscan su propio bien, y no el del proyecto
+
+
+
 
 ## Seccion 1: Introduccion
 
@@ -59,6 +69,10 @@ por lo tanto ElementAtOrDefault en caso de que no encuentre el elemento, va a ma
 
 
 ### Video 12 Filtrando por tipo - OfType
+
+Sirve para extraer de una lista que tiene diferentes tipos de objetos, solo un tipo de objeto de todos los que tiene la lista.
+
+![1716673601864](image/README/1716673601864.png)
 
 ## Seccion 3: Ordenando Elementos
 

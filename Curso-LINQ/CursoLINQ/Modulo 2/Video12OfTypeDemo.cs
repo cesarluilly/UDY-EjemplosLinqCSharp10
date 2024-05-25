@@ -14,24 +14,32 @@ namespace CursoLINQ.Modulo_2
             //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
-            var listado = new List<object>() { "Felipe", 1, 2, "Claudia", true };
+            //                                              //
+            //                                              //Lista con diferentes tipos de objetos.
+            List<object> listado = new List<object>() { "Felipe", 1, 2, "Claudia", true };
 
-            var strings = listado.OfType<string>();
-            var numeros = listado.OfType<int>();
+            //                                              //Solo traigo del tipo String
+            Console.WriteLine("**Ejemplo 1**");
+            IEnumerable<string> strings = listado.OfType<string>();
 
-            // sintaxis de queries
-            var strings_2 = from s in listado.OfType<string>()
+            //                                              //Solo traigo del tipo int
+            Console.WriteLine("**Ejemplo 2**");
+            IEnumerable<int> numeros = listado.OfType<int>();
+
+            Console.WriteLine("**Ejemplo 3**");
+            //                                              //sintaxis de queries
+            IEnumerable<string> strings_2 = from s in listado.OfType<string>()
                             select s;
 
-            // Ejemplo 2: herencia
-
-            var listadoAnimales = new List<Animal>()
+            //                                              //Ejemplo 2: herencia
+            Console.WriteLine("**Ejemplo 4**");
+            List<Animal> listadoAnimales = new List<Animal>()
                                     {
                                         new Perro(){Nombre = "Firulais"},
                                         new Gato(){Nombre = "Félix"}
                                     };
 
-            var perros = listadoAnimales.OfType<Perro>();
+            IEnumerable<Perro> perros = listadoAnimales.OfType<Perro>();
         }
 
         public abstract class Animal
