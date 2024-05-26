@@ -16,10 +16,16 @@ namespace CursoLINQ.Modulo_7
 
             var numeros = Enumerable.Range(1, 100);
 
+            //                                              //Del 1 al 10
             var primeros10Numeros = numeros.Take(10).ToList();
+
+            //                                              //Del numero 11 al 20
             var segundoLoteDe10 = numeros.Skip(10).Take(10).ToList();
 
+            //                                              //Del 91 al 100
             var ultimos10Numeros = numeros.TakeLast(10).ToList();
+
+            //                                              //Del 81 al 90
             var penultimoLote = numeros.SkipLast(10).TakeLast(10).ToList();
         }
     }

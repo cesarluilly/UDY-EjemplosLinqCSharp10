@@ -186,20 +186,58 @@ Por ejemplo para aplanar las coleciones lo podemos hacer con SelectMany
     * ![1716689591522](image/README/1716689591522.png)
 
 ## Seccion 7: Paginacion
-
+En este modulo no vamos a utilizar la sintaxis de query, ya que las instrucciones para sintaxis de query solo se encierra entre parentes el query y se le aplica la funcion, por lo tanto no hay mucha diferencia que con la sintaxis de metodo
 ### Video 26 Take y TakeLast
+En ocasiones vamos a tenere colecciones muy grandes y vamos a querer entonces solo tomar los n elementos de esa coleccion, para eso podemos utiliza la funcion Take
+
+* ![1716690084580](image/README/1716690084580.png)
 
 ### Video 27 Skip y SkipLast
+Con Skip podemos saltarnos unos cuantos elementos de la ****coleccion
+**NOTA: Skip funciona en base Zero** 
+* ![1716690568655](image/README/1716690568655.png)
 
 ### Video 28 Ejemplo de Paginacion
+**NOTA: Skip funciona en base Zero** 
+
+Combinando Skip y Take podemos realizar paginaciones
+* ![1716693182543](image/README/1716693182543.png)
+* ![1716693372164](image/README/1716693372164.png)
 
 ### Video 29 TakeWhile y SkipWhile
+Podriamos utilizar condiciones con Take y Skip.
 
-## Seccion 8:
+* Por ejemplo si queremos tomas los primeros elementos de una coleccion mientras se cumpla con una condicion indicada, podemos utilizar `TakeWhile`
+* Por ejemplo si queremos saltar los elementos de una coleccion mientras se cumple el predicado(condicion), y a partir de que el predicado es False tomar todos los elementos siguiente, podemos utilizar `TakeWhile`
+    * ![1716727255741](image/README/1716727255741.png)
 
-### Video 30
+## Seccion 8: Agrupando
 
-### Video 31
+### Video 30 GroupBy Simple
+
+A veses nos resulta util agrupar los elementos de una coleccion en base a una caracteristica especifica
+
+* Datos iniciales
+    * ![1716729181330](image/README/1716729181330.png)
+* Ejemplo 1
+    * ![1716729239977](image/README/1716729239977.png)
+    * ![1716729282290](image/README/1716729282290.png)
+* Ejemplo 2 (a Traves de Queries)
+    * ![1716729403322](image/README/1716729403322.png)
+    * ![1716729430779](image/README/1716729430779.png)
+
+### Video 31 GroupBy Por Rango de Edad
+Agrupamiento por Rango de edad, de rango de edad de 5 en 5
+
+**Nota** Aqui el agrupamiento se esta haciendo por el resultado de una division
+* Datos Iniciales
+    * ![1716730191876](image/README/1716730191876.png)
+* Ejemplo 1
+    * ![1716730516692](image/README/1716730516692.png)
+    * ![1716730691497](image/README/1716730691497.png)
+* Ejemplo 2
+    * ![1716730868868](image/README/1716730868868.png)
+    * ![1716730827361](image/README/1716730827361.png)
 
 ## Seccion 9: Relacionando Distintas Colecciones
 

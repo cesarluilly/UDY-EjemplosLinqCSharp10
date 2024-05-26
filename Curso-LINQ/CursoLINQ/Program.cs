@@ -26,13 +26,13 @@ using CursoLINQ.Modulo_9;
 //var video = new Video22Agregado();
 //var video = new Video23AllDemo();
 //var video = new Video24AnyDemo();
-var video = new Video25ContainsDemo();
+//var video = new Video25ContainsDemo();
 //var video = new Video26TakeYTakeLast();
 //var video = new Video27SkipYSkipLast();
 //var video = new Video28Paginacion();
 //var video = new Video29TakeWhileSkipWhile();
 //var video = new Video30GroupByDemo();
-//var video = new Video31GroupByEdad();
+var video = new Video31GroupByEdad();
 //var video = new Video32JoinDemo();
 //var video = new Video33GroupJoinDemo();
 

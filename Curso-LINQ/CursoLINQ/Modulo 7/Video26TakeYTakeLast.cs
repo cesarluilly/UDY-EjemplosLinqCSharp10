@@ -14,14 +14,14 @@ namespace CursoLINQ.Modulo_7
             //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
-            var numeros = Enumerable.Range(1, 100);
+            IEnumerable<int> numeros = Enumerable.Range(1, 100);
 
-            var primeros10Numeros = numeros.Take(10).ToList();
+            List<int> primeros10Numeros = numeros.Take(10).ToList();
 
-            var ultimos10Numeros = numeros.TakeLast(10).ToList();
+            List<int> ultimos10Numeros = numeros.TakeLast(10).ToList();
 
-            // Sintaxis de queries
-            var primeros10Numeros_2 = (from n in numeros
+            //                                              //Sintaxis de queries
+            IEnumerable<int> primeros10Numeros_2 = (from n in numeros
                                        select n).Take(10);
         }
     }

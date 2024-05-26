@@ -14,7 +14,7 @@ namespace CursoLINQ.Modulo_8
             //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
-            var personas = new List<Persona>() {
+            List<Persona> personas = new List<Persona>() {
                 new Persona { Nombre = "Eduardo",Edad = 19, Soltero = true },
                 new Persona { Nombre = "Nidia", Edad = 25, Soltero = true },
                 new Persona { Nombre = "Alejandro", Edad = 30, Soltero = true },
@@ -24,16 +24,38 @@ namespace CursoLINQ.Modulo_8
                 new Persona { Nombre = "Esmerlin", Edad = 45, Soltero = false }
                 };
 
-            var agrupamientoPorSolteria = personas.GroupBy(p => p.Soltero);
+            
+            Console.WriteLine("**//**********************************************//**");
+            Console.WriteLine("**Ejemplo 1. Agrupar personas por si son solteras o no**");
+            //                                              //Agrupar personas por si son solteras o no
+            IEnumerable<IGrouping<bool, Persona>> agrupamientoPorSolteria = 
+                personas.GroupBy(p => p.Soltero);
 
-            // sintaxis de queries
+            foreach (IGrouping<bool, Persona> item in agrupamientoPorSolteria)
+            {
+                //                                          //Calculo el Count a traves del Key que genera el agrupamiento
+                Console.WriteLine($"Grupo de las personas donde Soltero = {item.Key} (Total: {item.Count()})");
+
+                //                                          //Itero los elementos de un agrupamiento actual
+                foreach (var persona in item)
+                {
+                    Console.WriteLine($"- {persona.Nombre}");
+                }
+            }
+
+            Console.WriteLine("**//**********************************************//**");
+            Console.WriteLine("**Ejemplo 2. Agrupar personas por si son solteras o no**");
+            //                                              //Sintaxis de queries
             var agrupamientoPorSolteria_2 = from p in personas
                                            group p by p.Soltero into grupos
                                            select grupos;
 
             foreach (var item in agrupamientoPorSolteria_2)
             {
+                //                                          //Calculo el Count a traves del Key que genera el agrupamiento
                 Console.WriteLine($"Grupo de las personas donde Soltero = {item.Key} (Total: {item.Count()})");
+
+                //                                          //Itero los elementos de un agrupamiento actual
                 foreach (var persona in item)
                 {
                     Console.WriteLine($"- {persona.Nombre}");
