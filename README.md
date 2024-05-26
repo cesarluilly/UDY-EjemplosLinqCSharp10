@@ -432,6 +432,26 @@ Procedemos a correr
 **NOTA** `LINQ nos permite conectarnos con diferentes proveedores de bases de datos utilizando el mismo codigo`
 
 ### Video 43 Instalando los Paquetes de Entity Framework Core
+* Proveedores de base de datos
+    * Bases de datos en memoria
+        * Esto es ideal para pruebas automaticas
+        * ![1716746703028](image/README/1716746703028.png)
+    * SQL Ligh
+        * Lo cual podemos utilizar en Linux, Mac de una manera muy sencilla
+        * ![1716746798659](image/README/1716746798659.png)
+    * Cosmos 
+        * Base de datos de Azure utilizando el modelo de MySQL
+        * ![1716746841059](image/README/1716746841059.png)
+    * SQL Server
+        * ![1716746939206](image/README/1716746939206.png)
+    * Oracle
+    * MariaDB
+    * Postgress
+    * MySQL
+
+En este caso vamos a utilizar 2 motores de bases de datos distintos sin ningun problema para comprobar que linq es muy amigable con diferentes proveedores de bases de datos
+* SQL Server
+* SQL Light
 
 ### Video 44 Configurando Entity Framework Core
 
