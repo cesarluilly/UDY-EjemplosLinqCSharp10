@@ -1,4 +1,7 @@
 # UDY-EjemplosLinqCSharp10
+## Certificado
+![1716673046545](image/README/UC-ebdd4b42-eea9-4e13-a311-7ebb6cfc4f8e.jpg)
+
 ## Apuntos cesar
 * **Formas correctas de utiliza var**
     * Solo para cuando hay muchas invocaciones seguidas, esto es mas utilizado para cosas que no tienen mucho sentido y significado
@@ -455,9 +458,25 @@ En este caso vamos a utilizar 2 motores de bases de datos distintos sin ningun p
 
 ### Video 44 Configurando Entity Framework Core
 
+* Configurando 2 proveedores de bases de datos
+    * ![1716747244401](image/README/1716747244401.png)
+
+* Utilizar una base de datos existente de `SQL Light` sin tener que agregarlo al gestor de bases de datos
+    * ![1716747443821](image/README/1716747443821.png)
+    * ![1716747513462](image/README/1716747513462.png)
+    * ![1716747553297](image/README/1716747553297.png)
+
 ### Video 45 Usando LINQ con Entity Framework Core
 
+**Nota** No todo lo que aprendimos de LINQ es utilizable con EntityFrameworkCore, por ejemplo .Chunk() no se puede utilizar, en dado caso primero tendriamos que hacer la consulta y despues utilizar Chunk(), pero esto seria ineficiente si la tabla tiene millones de registros.
+
+* ![1716747837427](image/README/1716747837427.png)
+
 ### Video 46 LINQ y SQL Server
+
+**Las migraciones para cada Proveedor de base de datos es diferente en cuanto a la logica**
+* Utilizando SQL Server
+    * ![1716747935625](image/README/1716747935625.png)
 
 ## Seccion 13:Gracias
 
