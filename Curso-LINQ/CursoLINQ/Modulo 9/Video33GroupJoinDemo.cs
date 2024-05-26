@@ -14,7 +14,7 @@ namespace CursoLINQ.Modulo_9
             //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
-            var personas = new List<Persona>() {
+            List<Persona> personas = new List<Persona>() {
                             new Persona { Nombre = "Eduardo", EmpresaId = 1, },
                             new Persona { Nombre = "Nidia",  EmpresaId = 1 },
                             new Persona { Nombre = "Alejandro", EmpresaId = 3 },
@@ -24,7 +24,7 @@ namespace CursoLINQ.Modulo_9
                             new Persona { Nombre = "Esmerlin", EmpresaId = 3 }
                             };
 
-            var empresas = new List<Empresa>()
+            List<Empresa> empresas = new List<Empresa>()
             {
                 new Empresa{Id = 1, Nombre = "Electrodomésticos Felipe"},
                 new Empresa{Id = 2, Nombre = "Bicicletas Valentina"},
@@ -32,12 +32,31 @@ namespace CursoLINQ.Modulo_9
                 new Empresa{Id = 4, Nombre = "Ferreteria Lorenzo"}
             };
 
+            Console.WriteLine("//**********************************************//Sintaxis de Metodo");
+            Console.WriteLine("**Ejemplo 1**");
+
             var empresasYSusEmpleados = empresas.GroupJoin(personas, e => e.Id, p => p.EmpresaId,
                 (empresa, personas) => new { Empresa = empresa, Personas = personas });
 
-            // Sintaxis de queries
+            foreach (var item in empresasYSusEmpleados)
+            {
+                Console.WriteLine($"Las siguientes personas trabajan en {item.Empresa.Nombre}");
+
+                foreach (var persona in item.Personas)
+                {
+                    Console.WriteLine($"-{persona.Nombre}");
+                }
+            }
+
+
+            //                                              //Sintaxis de queries
+            Console.WriteLine("");
+            Console.WriteLine("//**********************************************//Sintaxis de Query");
+            Console.WriteLine("**Ejemplo 2**");
             var empresasYSusEmpleados_2 = from empresa in empresas
                                           join persona in personas
+                                          //                //Utilizamos into para meter a las personas en la variable
+                                          //                //    personas2
                                           on empresa.Id equals persona.EmpresaId into personas2
                                           select new
                                           {
@@ -54,7 +73,6 @@ namespace CursoLINQ.Modulo_9
                     Console.WriteLine($"-{persona.Nombre}");
                 }
             }
-
         }
     }
 }

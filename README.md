@@ -1,20 +1,22 @@
 # UDY-EjemplosLinqCSharp10
 ## Apuntos cesar
-* Formas correctas de utiliza var
+* **Formas correctas de utiliza var**
     * Solo para cuando hay muchas invocaciones seguidas, esto es mas utilizado para cosas que no tienen mucho sentido y significado
         * Esto solo ayuda para eficientar el codigo
         * ![1716673046545](image/README/1716673046545.png)
 * Aun asi en la mayoria de los casos, hay que evitar el uso de var, ya que al inicio puede ser rapido escribirlo, pero si vuelves a leer el codigo ya te resulta complejo entenderle, pero para el mantenimiento no sirve en absoluto, el uso de var solo lo hacen personas egoistas que solo buscan su propio bien, y no el del proyecto
+* El unico lugar justificable para usar var, es cuando declaramos un objeto anonimo, pero eso es cuando el tipo de objeto no nos interesa mucho porque solo sirve de transicion para calcular otro dato.
 
-## Entender que es una expresion lambda, ya que al trabajar con LINQ utiliza mucho las expresiones lamda
+## Entender que es una expresion lambda, ya que al trabajar con LINQ utiliza mucho las expresiones Lambda
 
 https://learn.microsoft.com/es-es/dotnet/csharp/language-reference/operators/lambda-expressions
 ![1716684218255](image/README/1716684218255.png)
 ![1716684319704](image/README/1716684319704.png)
 ![1716684378116](image/README/1716684378116.png)
 
-
-
+* Otros ejemplos y su diferencia
+    * ![1716731900782](image/README/1716731900782.png)
+    * ![1716731972195](image/README/1716731972195.png)
 
 ## Seccion 1: Introduccion
 
@@ -242,8 +244,44 @@ Agrupamiento por Rango de edad, de rango de edad de 5 en 5
 ## Seccion 9: Relacionando Distintas Colecciones
 
 ### Video 32 Join(Inner Join)
+En ocaciones vamos a tener un Join que vamos a querer unir por una valor comun a traves de un Join, 
+en el mundo de SQL Server es similar a un InnerJoin
+
+
+* Expresiones lambda y su diferencia
+    * ![1716731900782](image/README/1716731900782.png)
+    * ![1716731972195](image/README/1716731972195.png)
+
+* Datos iniciales
+    * ![1716732619960](image/README/1716732619960.png)
+* Ejemplo 1(Sintaxis de metodo)
+    * ![1716732662707](image/README/1716732662707.png)
+    * ![1716732710736](image/README/1716732710736.png)
+* Ejemplo 2(Sintaxis de Query)
+    * ![1716732806322](image/README/1716732806322.png)
+    * ![1716732845766](image/README/1716732845766.png)
+
 
 ### Video 33 GroupJoin(Left Join)
+Ademas de hacer una operacion de relacion utilizando Join, podemos hacer una relacion que ademas de hacer el Join tambien pueda hacer una agrupacion.
+
+Left Join siempre va a traer los registros de la primera tabla y su relacion con la segunda tabla
+
+A continuacion vamos a hacer 
+* Una relacion entre Empresa y Persona por el Id correspondiente
+* Voy a agrupar a todas las personas que pertenecen a una empresa especifica.
+    * Por ejemplo voy a agrupar a Eduardo y Nidia en un mismo grupo ya que pertenecen a la empresa con Id 1
+
+GroupJoin va a poder permitir agrupar y hacer un join al mismo tiempo.
+
+* Datos Iniciales
+    * ![1716733940989](image/README/1716733940989.png)
+* Ejemplo 1 (Sintaxis de Metodo)
+    * ![1716734028943](image/README/1716734028943.png)
+    * ![1716734125199](image/README/1716734125199.png)
+* Ejemplo 2 (Sintaxis de Query)
+    * ![1716734183660](image/README/1716734183660.png)
+    * ![1716734293151](image/README/1716734293151.png)
 
 ## Seccion 10: Conjuntos
 

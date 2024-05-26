@@ -32,9 +32,9 @@ using CursoLINQ.Modulo_9;
 //var video = new Video28Paginacion();
 //var video = new Video29TakeWhileSkipWhile();
 //var video = new Video30GroupByDemo();
-var video = new Video31GroupByEdad();
+//var video = new Video31GroupByEdad();
 //var video = new Video32JoinDemo();
-//var video = new Video33GroupJoinDemo();
+var video = new Video33GroupJoinDemo();
 
 
 
