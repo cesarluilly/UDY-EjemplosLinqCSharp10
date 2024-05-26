@@ -14,11 +14,11 @@ namespace CursoLINQ.Modulo_6
             //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
-            var numeros = Enumerable.Range(1, 5);
+            IEnumerable<int> numeros = Enumerable.Range(1, 5);
 
-            var estaElNumero3 = numeros.Contains(3);
+            bool estaElNumero3 = numeros.Contains(3);
 
-            var estaElNumero20 = numeros.Contains(20);
+            bool estaElNumero20 = numeros.Contains(20);
 
         }
     }

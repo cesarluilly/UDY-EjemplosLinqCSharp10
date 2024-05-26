@@ -160,7 +160,7 @@ Por ejemplo para aplanar las coleciones lo podemos hacer con SelectMany
 * Corrida
     * ![1716688545339](image/README/1716688545339.png)
 
-## Seccion 6: Cuantificadores
+## Seccion 6: Cuantificadores (Instrucciones que solo devuelven true o false)
 * Los cuantificadores nos permiten hacer preguntas como 
     * Son todas las personas de esta coleccion mayores de edad?
     * Existe algun numero negativo en esta coleccion?
@@ -170,9 +170,8 @@ Por ejemplo para aplanar las coleciones lo podemos hacer con SelectMany
 ### Video 23 All
 * Los cuantificadores nos permiten hacer preguntas como 
     * Son todas las personas de esta coleccion mayores de edad?
-    * Existe algun numero negativo en esta coleccion?
-
-* ![1716688843658](image/README/1716688843658.png)
+    * Son todas las personas de esta coleccion solteros?
+        * ![1716688843658](image/README/1716688843658.png)
 
 ### Video 24 Any
 
@@ -180,9 +179,11 @@ Por ejemplo para aplanar las coleciones lo podemos hacer con SelectMany
     * Aqui hacemos la pregunta
     * Existe en la coleccion al menos una persona que sea menor de 18 años?
     * Existe en la coleccion al menos una persona que sea mayor de 20 ?
-* ![1716689085014](image/README/1716689085014.png)
+        * ![1716689085014](image/README/1716689085014.png)
 
 ### Video 25 Contains
+* Contain es una manera de pregunta si un elemento especifico se encuentra dentro de la coleccion
+    * ![1716689591522](image/README/1716689591522.png)
 
 ## Seccion 7: Paginacion
 
