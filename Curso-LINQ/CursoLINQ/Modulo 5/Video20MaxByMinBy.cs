@@ -14,7 +14,7 @@ namespace CursoLINQ.Modulo_5
             //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
-            var personas = new List<Persona>() {
+            List<Persona> personas = new List<Persona>() {
                                 new Persona { Nombre = "Eduardo", Edad = 19, },
                                 new Persona { Nombre = "Nidia", Edad = 25 },
                                 new Persona { Nombre = "Alejandro", Edad = 30 },
@@ -23,12 +23,16 @@ namespace CursoLINQ.Modulo_5
 
             var numeros = Enumerable.Range(1, 5);
 
-            Console.WriteLine($"La suma de los numeros es {numeros.Sum()}");
-            Console.WriteLine($"La suma de los numeros es {personas.Sum(p => p.Edad)}");
+            Console.WriteLine($"numeros.Sum() --> La suma de los numeros es {numeros.Sum()}");
+            Console.WriteLine($"personas.Sum(p => p.Edad) --> La suma de los numeros es {personas.Sum(p => p.Edad)}");
 
-            Console.WriteLine($"La edad máxima de las personas es {personas.Max(x => x.Edad)}");
-            Console.WriteLine($"La edad mínima de las personas es {personas.Min(x => x.Edad)}");
+            Console.WriteLine($"personas.Max(x => x.Edad) --> La edad máxima de las personas es {personas.Max(x => x.Edad)}");
+            Console.WriteLine($"personas.Min(x => x.Edad) --> La edad mínima de las personas es {personas.Min(x => x.Edad)}");
 
+            //                                              //MaxBy y MinBy es nuevo en C# 10
+            //                                              //Mientras con .Max y .Min me trae solo la edad maxima o minima
+            //                                              //.MaxBy y .MinBy me trae el objeto que tiene
+            //                                              //    la edad Maxima o Minima correspondiente
             var personaDeMayorEdad = personas.MaxBy(x => x.Edad);
             var personaDeMenorEdad = personas.MinBy(x => x.Edad);
         }

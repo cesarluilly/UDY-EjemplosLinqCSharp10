@@ -21,9 +21,9 @@ namespace CursoLINQ.Modulo_6
                     new Persona { Nombre = "Valentina", Edad = 22, Soltero = false }
                     };
 
-            var sonTodasLasPersonasMayoresDeEdad = personas.All(p => p.Edad >= 18);
+            bool sonTodasLasPersonasMayoresDeEdad = personas.All(p => p.Edad >= 18);
 
-            var sonTodosSolteros = personas.All(p => p.Soltero);
+            bool sonTodosSolteros = personas.All(p => p.Soltero);
 
         }
     }

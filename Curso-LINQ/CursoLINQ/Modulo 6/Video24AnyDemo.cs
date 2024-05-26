@@ -14,17 +14,16 @@ namespace CursoLINQ.Modulo_6
             //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
-            var personas = new List<Persona>() {
+            List<Persona> personas = new List<Persona>() {
                 new Persona { Nombre = "Eduardo",Edad = 19, Soltero = true },
                 new Persona { Nombre = "Nidia", Edad = 25, Soltero = true },
                 new Persona { Nombre = "Alejandro", Edad = 30, Soltero = true },
                 new Persona { Nombre = "Valentina", Edad = 22, Soltero = false }
                 };
 
-            var existeMenor = personas.Any(p => p.Edad < 18);
+            bool existeMenor = personas.Any(p => p.Edad < 18);
 
-            var existePersonaMayorDe20 = personas.Any(p => p.Edad > 20);
-
+            bool existePersonaMayorDe20 = personas.Any(p => p.Edad > 20);
         }
     }
 }

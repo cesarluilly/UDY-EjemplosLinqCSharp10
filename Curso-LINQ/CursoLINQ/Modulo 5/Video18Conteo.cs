@@ -21,16 +21,21 @@ namespace CursoLINQ.Modulo_5
                 new Persona { Nombre = "Valentina", Soltero = false }
                 };
 
-            Console.WriteLine($"La cantidad de personas es {personas.Count()}");
+            Console.WriteLine($"(Count): {personas.Count()}");
 
-            Console.WriteLine($"La cantidad de personas solteras es {personas.Count(p => p.Soltero)}");
+            Console.WriteLine($"Count(p => p.Soltero) : {personas.Count(p => p.Soltero)}");
 
-            Console.WriteLine($"Int max = {int.MaxValue.ToString("N")}");
+            Console.WriteLine($"Int max : {int.MaxValue.ToString("N")}");
 
-            //personas.LongCount();
+            Console.WriteLine($"(LongCount) : {personas.LongCount()}");
 
-            // Sintaxis de queries (no muy útil en estos casos)
+            Console.WriteLine($"LongCount es bueno cuando tengo una cantidad masiva de dos mil millones, " +
+                $"en este caso esta lista no sobrepasa esa cantidad y por eso es valido usar Count");
+            
 
+            //                                              //Sintaxis de queries
+            //                                              //(no muy útil en estos casos ya que no es mucha la
+            //                                              //    variacion que cuando utilizo sintaxis de metodo)
             var conteoSolteros = (from p in personas
                                   where p.Soltero
                                   select p).Count();

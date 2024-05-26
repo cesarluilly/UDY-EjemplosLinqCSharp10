@@ -129,22 +129,58 @@ Por ejemplo para aplanar las coleciones lo podemos hacer con SelectMany
 * Ejemplo 4
     * ![1716686273851](image/README/1716686273851.png)
 ## Seccion 5: Escalares
-
+* En este modulo no vamos a utilizar mucho la sintaxis de Query ya que no hay mucha variacion con respecto a la sintaxis de metodo
 ### Video 18 Count y LongCount
 
+* Codigo 
+    * ![1716686864986](image/README/1716686864986.png)
+* Corrida
+    * ![1716686930936](image/README/1716686930936.png)
+
 ### Video 19 Suma, Maximo y Minimo
+* Codigo
+    * ![1716687168906](image/README/1716687168906.png)
+* Corrida
+    * ![1716687201708](image/README/1716687201708.png)
 
 ### Video 20 MaxBy y MinBy(Nuevo de C# 10)
+* Mientras con .Max y .Min me trae solo la edad maxima o minima
+* .MaxBy y .MinBy me trae el objeto que tiene la edad maxima o minima correspondiente
+![1716687792009](image/README/1716687792009.png)
 
 ### Video 21 Promedios
+* Codigo
+    * ![1716687995375](image/README/1716687995375.png)
+* Corrida
+    * ![1716688024386](image/README/1716688024386.png)
 
 ### Video 22 Agregados
+* Codigo
+    * ![1716688510980](image/README/1716688510980.png)
+* Corrida
+    * ![1716688545339](image/README/1716688545339.png)
 
 ## Seccion 6: Cuantificadores
+* Los cuantificadores nos permiten hacer preguntas como 
+    * Son todas las personas de esta coleccion mayores de edad?
+    * Existe algun numero negativo en esta coleccion?
+
+**NOTA**. No existen sintaxis de query en cuantificadores, por lo tanto en este modulo no se vera la parte de sintaxis de query
 
 ### Video 23 All
+* Los cuantificadores nos permiten hacer preguntas como 
+    * Son todas las personas de esta coleccion mayores de edad?
+    * Existe algun numero negativo en esta coleccion?
+
+* ![1716688843658](image/README/1716688843658.png)
 
 ### Video 24 Any
+
+* Podemos tambien verificar si existe al menos un elemento en la coleccion
+    * Aqui hacemos la pregunta
+    * Existe en la coleccion al menos una persona que sea menor de 18 años?
+    * Existe en la coleccion al menos una persona que sea mayor de 20 ?
+* ![1716689085014](image/README/1716689085014.png)
 
 ### Video 25 Contains
 
