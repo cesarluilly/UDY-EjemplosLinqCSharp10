@@ -27,6 +27,7 @@ new Persona { Nombre = "Roberto", Edad = 61, FechaIngresoALaEmpresa = DateTime.N
 
             Console.WriteLine("**Ejemplo 1**");
             //                                              //Sintaxis de metodo
+            //                                              //Ordenando por Edad y Nombre
             IEnumerable<Persona> personasOrdenadasPorEdad = personas.OrderBy(x => x.Edad).ThenByDescending(x => x.Nombre);
 
             foreach (var persona in personasOrdenadasPorEdad)

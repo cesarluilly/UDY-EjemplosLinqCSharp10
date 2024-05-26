@@ -85,14 +85,24 @@ Sirve para extraer de una lista que tiene diferentes tipos de objetos, solo un t
 
 ### Video 14 ThenBy y ThenByDescending
 
+Se esta ordenando por Edad Ascendente y Nombre Descendete
 ![1716675788827](image/README/1716675788827.png)
 ![1716675749072](image/README/1716675749072.png)
 
 ### Video 15 Reverse
+Podemos revertir el orden de la proyeccion y lo hacemos con `Reverse`
+En caso de que a un listado de objetos quieramos aplicarle el reverse, funciona mejor o es mas rapido
+hacerlo a traves de un IEnumerable
+
+![1716681852809](image/README/1716681852809.png)
+
 
 ## Seccion 4: Proyecciones
 
 ### Video 16 Select
+
+![1716682335987](image/README/1716682335987.png)
+![1716682406558](image/README/1716682406558.png)
 
 ### Video 17 SelectMany
 

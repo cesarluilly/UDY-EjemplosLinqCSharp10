@@ -14,7 +14,7 @@ namespace CursoLINQ.Modulo_3
             //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
-            var personas = new List<Persona>() {
+            List<Persona> personasOriginal = new List<Persona>() {
                             new Persona { Nombre = "Eduardo", Edad = 30, FechaIngresoALaEmpresa = new DateTime(2021, 1, 2), Soltero = true },
                             new Persona { Nombre = "Nidia", Edad = 19, FechaIngresoALaEmpresa = new DateTime(2015, 11, 22), Soltero = true },
                             new Persona { Nombre = "Alejandro", Edad = 19, FechaIngresoALaEmpresa = new DateTime(2020, 4, 12), Soltero = false },
@@ -23,15 +23,24 @@ namespace CursoLINQ.Modulo_3
                             };
 
 
-            var numeros = Enumerable.Range(1, 20).Reverse();
+            //**********************************************//
+            Console.WriteLine("**Ejemplo 1**");
+            IEnumerable<int> numeros = Enumerable.Range(1, 5).Reverse();
 
-            // sintaxis de queries
-            var numeros_2 = from n in Enumerable.Range(1, 20).Reverse()
+            //                                              //Sintaxis de queries
+            IEnumerable<int> numeros_2 = from n in Enumerable.Range(1, 20).Reverse()
                             select n;
 
-            //personas.Reverse();
+            //**********************************************//
+            Console.WriteLine("**Ejemplo 2**");
+            List<Persona> personasRevertidoCopia = personasOriginal.ToList();
+            //                                              //Este reverse sirve para revertir el ordenamiento de personas
+            //                                              //    pero no crea un nuevo objeto.
+            personasRevertidoCopia.Reverse();
 
-            var personasInvertido = personas.AsEnumerable().Reverse().ToList();
+            //**********************************************//
+            Console.WriteLine("**Ejemplo 3**");
+            List <Persona> personasInvertido = personasOriginal.AsEnumerable().Reverse().ToList();
         }
     }
 }

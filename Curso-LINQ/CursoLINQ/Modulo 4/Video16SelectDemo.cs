@@ -22,14 +22,15 @@ new Persona { Nombre = "Valentina", Edad = 37, FechaIngresoALaEmpresa = new Date
 new Persona { Nombre = "Roberto", Edad = 61, FechaIngresoALaEmpresa = DateTime.Now.AddDays(-1), Soltero = false },
 };
 
-            var nombres = personas.Select(p => p.Nombre).ToList();
+            IEnumerable<String> nombres = personas.Select(p => p.Nombre).ToList();
 
             var nombresYEdades = personas.Select(p => new { Nombre = p.Nombre, Edad = p.Edad }).ToList();
 
-            var personasDTOs = personas.Select(p => new PersonaDTO { Nombre = p.Nombre, Edad = p.Edad }).ToList();
+            IEnumerable<PersonaDTO> personasDTOs = personas
+                    .Select(p => new PersonaDTO { Nombre = p.Nombre, Edad = p.Edad }).ToList();
 
-            var numeros = Enumerable.Range(1, 5).ToList();
-            var numerosDuplicados = numeros.Select(n => 2 * n).ToList();
+            IEnumerable<int> numeros = Enumerable.Range(1, 5).ToList();
+            IEnumerable<int> numerosDuplicados = numeros.Select(n => 2 * n).ToList();
 
             var personasConIndice = personas.Select((p, indice) => new { Persona = p, Indice = indice + 1 }).ToList();
 
@@ -39,16 +40,17 @@ new Persona { Nombre = "Roberto", Edad = 61, FechaIngresoALaEmpresa = DateTime.N
             }
 
             // Sintaxis de queries
-            var nombres_2 = (from p in personas
+            List<String> nombres_2 = (from p in personas
                              select p.Nombre).ToList();
 
             var nombresYEdades_2 = from p in personas
                                    select new { Nombre = p.Nombre, Edad = p.Edad };
 
-            var numerosDuplicados_2 = from n in numeros
+            IEnumerable<int> numerosDuplicados_2 = from n in numeros
                                       select 2 * n;
 
-            // No podemos hacer el ejemplo del índice con sintaxis de queries
+            //                                              //NOTA. No podemos hacer el ejemplo del índice con
+            //                                              //    sintaxis de queries
         }
     }
 }
