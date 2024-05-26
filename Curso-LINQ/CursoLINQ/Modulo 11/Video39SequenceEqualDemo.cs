@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_11
 {
-    public class SequenceEqualDemo
+    public class Video39SequenceEqualDemo
     {
         public void Ejemplo()
         {
@@ -22,13 +22,18 @@ namespace CursoLINQ.Modulo_11
 
             string[] D = { "fernando", "felipe" };
 
-            var AB = A.SequenceEqual(B);
+            //                                              //Ejemplo 1
+            bool AB = A.SequenceEqual(B);
 
-            var AC = A.SequenceEqual(C);
+            //                                              //Ejemplo 2
+            bool AC = A.SequenceEqual(C);
 
-            var ACSinImportarMayusculas = A.SequenceEqual(C, StringComparer.OrdinalIgnoreCase);
+            //                                              //Ejemplo 3 (Ignora mayusculas y minusculas)
+            bool ACSinImportarMayusculas = 
+                A.SequenceEqual(C, StringComparer.OrdinalIgnoreCase);
 
-            var AD = A.SequenceEqual(D);
+            //                                              //Ejemplo 4
+            bool AD = A.SequenceEqual(D);
 
             // Nota: no existe sintaxis de query para este código.
         }

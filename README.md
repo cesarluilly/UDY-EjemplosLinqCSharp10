@@ -4,8 +4,13 @@
     * Solo para cuando hay muchas invocaciones seguidas, esto es mas utilizado para cosas que no tienen mucho sentido y significado
         * Esto solo ayuda para eficientar el codigo
         * ![1716673046545](image/README/1716673046545.png)
-* Aun asi en la mayoria de los casos, hay que evitar el uso de var, ya que al inicio puede ser rapido escribirlo, pero si vuelves a leer el codigo ya te resulta complejo entenderle, pero para el mantenimiento no sirve en absoluto, el uso de var solo lo hacen personas egoistas que solo buscan su propio bien, y no el del proyecto
-* El unico lugar justificable para usar var, es cuando declaramos un objeto anonimo, pero eso es cuando el tipo de objeto no nos interesa mucho porque solo sirve de transicion para calcular otro dato.
+    * Aun asi en la mayoria de los casos, hay que evitar el uso de var, ya que al inicio puede ser rapido escribirlo, pero si vuelves a leer el codigo ya te resulta complejo entenderle, pero para el mantenimiento no sirve en absoluto, el uso de var solo lo hacen personas egoistas que solo buscan su propio bien, y no el del proyecto
+    * El unico lugar justificable para usar var, es cuando declaramos un objeto anonimo, pero eso es cuando el tipo de objeto no nos interesa mucho porque solo sirve de transicion para calcular otro dato.
+
+* **Identificar el tipo de objeto que devuelve un metodo**
+    * ![1716741582236](image/README/1716741582236.png)
+        * En este caso se refiere a una coleccion de tuplas
+        * ![1716741859302](image/README/1716741859302.png)
 
 ## Entender que es una expresion lambda, ya que al trabajar con LINQ utiliza mucho las expresiones Lambda
 
@@ -17,6 +22,8 @@ https://learn.microsoft.com/es-es/dotnet/csharp/language-reference/operators/lam
 * Otros ejemplos y su diferencia
     * ![1716731900782](image/README/1716731900782.png)
     * ![1716731972195](image/README/1716731972195.png)
+
+
 
 ## Seccion 1: Introduccion
 
@@ -287,25 +294,142 @@ GroupJoin va a poder permitir agrupar y hacer un join al mismo tiempo.
 
 ### Video 34 Distinct y DistinctBy(Nuevo de C# 10)
 
+* Datos Iniciales
+    * ![1716735607929](image/README/1716735607929.png)
+* Ejemplo 1(Sintaxis metodo)
+    * ![1716735399559](image/README/1716735399559.png)
+* Ejemplo 2(Sintaxis Query)
+    * ![1716735513790](image/README/1716735513790.png)
+
+
+
 ### Video 35 Union y UnionBy (Nuevo de C# 10)
+Con Union podemos unir 2 colecciones y eliminar los duplicados
+
+* Datos Iniciales
+    *    ![1716735963750](image/README/1716735963750.png)
+* Ejemplo 1 (Union de 2 listas de tipo int)
+    * ![1716736179859](image/README/1716736179859.png)
+* Ejemplo 1 (Union de 2 listas de objetos, la union es en base al nombre) **Nota** En caso de haber duplicados, tomara el primer elemento de la primera lista
+    * ![1716736264499](image/README/1716736264499.png)
 
 ### Video 36 Except y ExceptBy (Nuevo de C# 10)
+* Con Except podemos hacer una comparacion de colecciones donde tengamos todos los elementos de la primera coleccion que no se encuentren en la segunda coleccion
+
+* Visualmente Basandonos en el siguiente grafico
+    * ![1716736432955](image/README/1716736432955.png)
+* Vamos a tener todo lo que esta en A, pero que no este en B, esto es lo que el Except me da como resultado
+
+Empezemos con el codigo y pruebas
+
+* Datos Iniciales
+    * ![1716736736307](image/README/1716736736307.png)
+* Ejemplo 1 
+    * ![1716736972054](image/README/1716736972054.png)
+* Ejemplo 2 (Uso de ExceptBy nuevo en C# 10, esta comparacion en este caso de hace a traves del nombre)
+    * ![1716737218245](image/README/1716737218245.png)
 
 ### Video 37 Intersect y IntersectBy (Nuevo de C# 10)
+Podemos utilizar Intersect o IntersectBy para buscar los elementos comunes entre 2 colecciones
+
+* Datos Iniciales
+    * ![1716737743193](image/README/1716737743193.png)
+* Ejemplo 1
+    * ![1716737830747](image/README/1716737830747.png)
+* Ejemplo 2 (IntersectBy nuevo en C# 10) Aqui me va a traer los objetos comunes a traves del nombre
+    * ![1716737988555](image/README/1716737988555.png)
 
 ## Seccion 11: Miscelaneo
 
 ### Video 38 Concat
+La operacion de concatenacion nos permite juntar 2 colecciones, a diferencia de join este los junta sin eliminar duplicados
+
+* Datos Iniciales
+    * ![1716738317341](image/README/1716738317341.png)
+* Ejemplo 1
+    * ![1716738429151](image/README/1716738429151.png)
+* Ejemplo 2 (Aqui se ve que solo une sin elimina duplicados)
+    * ![1716738551654](image/README/1716738551654.png)
+* **NOTA** No existe sintaxis de Query
 
 ### Video 39 SequenceEqual
 
+A veses necesitamos verificar si 2 colecciones tienen exactamente los mismos elementos
+
+* Ejemplos
+    * ![1716740761459](image/README/1716740761459.png)
+
+
 ### Video 40 Zip
+Con ZIP podemos realizar una operacion sobre los elementos respectivos de dos colecciones segun el orden.
+
+Es decir de una lista que tiene 3 elementos voy a combinar segun el Indice
+* Lista 1
+    * 0 - A
+    * 1 - B
+    * 2 - C
+* Lista 2
+    * 0 - a
+    * 1 - b
+    * 2 - c
+* Combinacion
+    * 0 - A a
+    * 1 - B b
+    * 2 - C c
+
+* Identificar el tipo de objeto que devuelve un metodo
+    * ![1716741582236](image/README/1716741582236.png)
+        * En este caso se refiere a una coleccion de tuplas
+        * ![1716741859302](image/README/1716741859302.png)
+
+* Datos Iniciales
+    * ![1716742478370](image/README/1716742478370.png)
+* Ejemplo 1
+    * ![1716742521985](image/README/1716742521985.png)
+    * ![1716742680953](image/README/1716742680953.png)
+* Ejemplo 2 Realizando operacion con la informacion de cada tupla
+    * ![1716742637201](image/README/1716742637201.png)
 
 ### Video 41 Chunk (Nuevo de C# 10)
 
+Podemos divir una coleccion en distintas partes utilizando "Chunk"
+
+
+
+* Datos Iniciales
+    * ![1716743082493](image/README/1716743082493.png)
+* Ejemplo 1
+    * ![1716743137645](image/README/1716743137645.png)
+    * ![1716743038052](image/README/1716743038052.png)
+
 ### Video 42 TryGetNonEnumeratedCount (Nuevo de C# 10)
 
+* Puntos importantes
+    * Cuando contamos los elementos de una coleccion, esperamos que esta operacion sea sumamente rapida, despues de todo simplemente queremos un numero el cual nos indica la cantidad de elementos de la coleccion
+
+    * Sin embargo, si nuestra coleccion implementa las interfaces adecuadas, esta operacion de conteo va a consistir en recorrer la coleccion para contar la cantidad de elementos, ESTO PUEDE SER INEFICIENTE EN DETERMINADOS ESCENARIOS, `SI QUEREMOS EVITAR ESA INEFICIENCIA, PODEMOS UTILIZAR UNA NUEVA FUNCION DE C# 10 LLAMADA **TryGetNonEnumeratedCount**`
+
+    * Por lo tanto `TryGetNonEnumeratedCount` nos permite verificar si el conteo que se realizo es eficiente.
+
+    * **El motivo por el cual da false** es porque no podemos realizar el conteo sin haber realizado una enumeracion.
+        * Cada ves que nos de false, el valor de conteo va a ser Zero ya que no se pudo contar nada
+    * **Esto es muy importante en escenarios de alto rendimiento en donde tu de verdad, de verdad necesitas el mayor rendimiento posible**
+
+Procedemos a correr
+* Datos iniciales
+    * ![1716746269106](image/README/1716746269106.png)
+* Ejemplo 1
+    * ![1716746337694](image/README/1716746337694.png)
+* Ejemplo 2 Utilizando Count() para ver su funcionamiento
+    * ![1716746388718](image/README/1716746388718.png)
+* Ejemplo 3 La clase implementa de IEnumerable
+    * ![1716746470091](image/README/1716746470091.png)
+* Ejemplo 4 La clase implementa de ICollection
+    * ![1716746586932](image/README/1716746586932.png)
+
 ## Seccion 12: LINQ Y Bases de Datos - Entity Framework Core
+
+**NOTA** `LINQ nos permite conectarnos con diferentes proveedores de bases de datos utilizando el mismo codigo`
 
 ### Video 43 Instalando los Paquetes de Entity Framework Core
 

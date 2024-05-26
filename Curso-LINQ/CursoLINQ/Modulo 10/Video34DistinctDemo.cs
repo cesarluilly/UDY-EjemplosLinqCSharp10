@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_10
 {
-    public class DistinctDemo
+    public class Video34DistinctDemo
     {
         public void Ejemplo()
         {
@@ -14,7 +14,7 @@ namespace CursoLINQ.Modulo_10
             //                                              //
             Console.WriteLine("**PARA VER LOS VALORES HAY QUE DEBUGGEAR**");
 
-            var personas = new List<Persona>() {
+            List<Persona> personas = new List<Persona>() {
                             new Persona { Nombre = "Eduardo", EmpresaId = 1, },
                             new Persona { Nombre = "Nidia",  EmpresaId = 1 },
                             new Persona { Nombre = "Eduardo"},
@@ -22,12 +22,25 @@ namespace CursoLINQ.Modulo_10
                             };
 
             int[] numeros = { 1, 2, 3, 1, 1, 6 };
+            //                                              //Sintaxis de metodo
 
-            var numerosSinRepeticiones = numeros.Distinct();
+            //                                              //Sacamos nueva coleccion de numeros sin repeticiones
+            IEnumerable<int> numerosSinRepeticiones = numeros.Distinct();
 
-            var personasSinNombresRepetidos = personas.DistinctBy(x => x.Nombre);
+            //                                              //DistincBy me trae el primer objeto que encuentra dado el
+            //                                              //    nombre sin repeticiones,
+            //                                              //Aunque sus otras propiedades sean diferentes, me trae solo
+            //                                              //    el primero.
+            IEnumerable<Persona> personasSinNombresRepetidos = personas.DistinctBy(x => x.Nombre);
 
-            // Sintaxis de queries
+
+
+
+
+
+
+
+            //                                              //Sintaxis de queries
             var numerosSinRepeticiones_2 = from n in numeros.Distinct()
                                            select n;
 

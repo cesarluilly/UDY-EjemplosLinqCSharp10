@@ -1,4 +1,6 @@
-﻿using CursoLINQ.Modulo_2;
+﻿using CursoLINQ.Modulo_10;
+using CursoLINQ.Modulo_11;
+using CursoLINQ.Modulo_2;
 using CursoLINQ.Modulo_3;
 using CursoLINQ.Modulo_4;
 using CursoLINQ.Modulo_5;
@@ -34,11 +36,16 @@ using CursoLINQ.Modulo_9;
 //var video = new Video30GroupByDemo();
 //var video = new Video31GroupByEdad();
 //var video = new Video32JoinDemo();
-var video = new Video33GroupJoinDemo();
-
-
-
-
+//var video = new Video33GroupJoinDemo();
+//var video = new Video34DistinctDemo();
+//var video = new Video35UnionDemo();
+//var video = new Video36ExceptDemo();
+//var video = new Video37IntersectDemo();
+//var video = new Video38ConcatDemo();
+//var video = new Video39SequenceEqualDemo();
+//var video = new Video40ZipDemo();
+//var video = new Video41ChunkDemo();
+var video = new Video42TryGetNonEnumeratedCountDemo();
 
 
 video.Ejemplo();

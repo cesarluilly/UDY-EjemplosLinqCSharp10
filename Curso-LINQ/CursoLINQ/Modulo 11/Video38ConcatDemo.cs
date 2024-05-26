@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoLINQ.Modulo_11
 {
-    public class ConcatDemo
+    public class Video38ConcatDemo
     {
         public void Ejemplo()
         {
@@ -18,7 +18,15 @@ namespace CursoLINQ.Modulo_11
 
             int[] B = { 4, 5, 6 };
 
-            var resultado = A.Concat(B);
+            int[] C = { 1, 2 };
+
+            Console.WriteLine("//**********************************************//");
+            Console.WriteLine("**Ejemplo 1**");
+            IEnumerable<int> resultado = A.Concat(B);
+
+            Console.WriteLine("//**********************************************//");
+            Console.WriteLine("**Ejemplo 2**");
+            IEnumerable<int> resultado2 = A.Concat(C);
 
             // Nota: no existe sintaxis de query para este código.
         }
