@@ -4,8 +4,14 @@
     * Solo para cuando hay muchas invocaciones seguidas, esto es mas utilizado para cosas que no tienen mucho sentido y significado
         * Esto solo ayuda para eficientar el codigo
         * ![1716673046545](image/README/1716673046545.png)
-
 * Aun asi en la mayoria de los casos, hay que evitar el uso de var, ya que al inicio puede ser rapido escribirlo, pero si vuelves a leer el codigo ya te resulta complejo entenderle, pero para el mantenimiento no sirve en absoluto, el uso de var solo lo hacen personas egoistas que solo buscan su propio bien, y no el del proyecto
+
+## Entender que es una expresion lambda, ya que al trabajar con LINQ utiliza mucho las expresiones lamda
+
+https://learn.microsoft.com/es-es/dotnet/csharp/language-reference/operators/lambda-expressions
+![1716684218255](image/README/1716684218255.png)
+![1716684319704](image/README/1716684319704.png)
+![1716684378116](image/README/1716684378116.png)
 
 
 
@@ -101,11 +107,27 @@ hacerlo a traves de un IEnumerable
 
 ### Video 16 Select
 
+La funcion select nos permite realizar una proyeccion de los datos, pero tambien
+puedo hacer una transformacion mientras estoy en el proceso
 ![1716682335987](image/README/1716682335987.png)
 ![1716682406558](image/README/1716682406558.png)
 
 ### Video 17 SelectMany
-
+Hasta ahora nos la hemos pasado trabajando con una coleccion, sin embargo con LINQ podemos trabajar
+varias colecciones de manera simultanea.
+Por ejemplo para aplanar las coleciones lo podemos hacer con SelectMany
+* Datos iniciales
+    * ![1716685445815](image/README/1716685445815.png)
+* Ejemplo 1
+    * ![1716685758953](image/README/1716685758953.png)
+* Ejemplo 2
+    * ![1716685860156](image/README/1716685860156.png)
+    * ![1716685876064](image/README/1716685876064.png)
+* Ejemplo 3
+    * ![1716686067130](image/README/1716686067130.png)
+    * ![1716686089076](image/README/1716686089076.png)
+* Ejemplo 4
+    * ![1716686273851](image/README/1716686273851.png)
 ## Seccion 5: Escalares
 
 ### Video 18 Count y LongCount
