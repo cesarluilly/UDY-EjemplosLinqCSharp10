@@ -8,7 +8,10 @@
         * Esto solo ayuda para eficientar el codigo
         * ![1716673046545](image/README/1716673046545.png)
     * Aun asi en la mayoria de los casos, hay que evitar el uso de var, ya que al inicio puede ser rapido escribirlo, pero si vuelves a leer el codigo ya te resulta complejo entenderle, pero para el mantenimiento no sirve en absoluto, el uso de var solo lo hacen personas egoistas que solo buscan su propio bien, y no el del proyecto
-    * El unico lugar justificable para usar var, es cuando declaramos un objeto anonimo, pero eso es cuando el tipo de objeto no nos interesa mucho porque solo sirve de transicion para calcular otro dato.
+    * Solo hay 2 maneras justificable de usar `var`    
+        * 1) Cuando declaramos un objeto anonimo, pero eso es cuando el tipo de objeto no nos interesa mucho porque solo sirve de transicion para calcular otro dato **NOTA** `En la mayoria de los casos este casi no aplica ya que los casos sucede con poca frecuencia` por lo tanto no es tan justificable
+        * 2) Cuando estamos intentado hacer una consulta compleja y aun no sabemos como elaborarlo, por lo tanto ahi la proyeccion se puede hacer con un objeto anonimo **NOTA** `Despues de haber construido la consulta hay que remover el var para poderle establecer el tipo de dato que retornara la consulta`
+    
 
 * **Identificar el tipo de objeto que devuelve un metodo**
     * ![1716741582236](image/README/1716741582236.png)
