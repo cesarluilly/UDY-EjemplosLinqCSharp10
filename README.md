@@ -256,6 +256,22 @@ Agrupamiento por Rango de edad, de rango de edad de 5 en 5
 
 ## Seccion 9: Relacionando Distintas Colecciones
 
+* W3Schools
+    * ![1718211903858](image/README/1718211903858.png)
+* ChatGPt Model 
+    * ![1718212029580](image/README/1718212029580.png)
+* ChatGPT Data
+    * ![1718212333455](image/README/1718212333455.png)
+* ChatGPT LeftJoin
+    * ![1718212883977](image/README/1718212883977.png)
+    * ![1718212206506](image/README/1718212206506.png)
+    * ![1718212360468](image/README/1718212360468.png)
+    * 
+* ChatGPT RightJoin
+    * ![1718213228378](image/README/1718213228378.png)
+    * ![1718212266129](image/README/1718212266129.png)
+    * ![1718212373153](image/README/1718212373153.png)
+
 ### Video 32 Join(Inner Join)
 En ocaciones vamos a tener un Join que vamos a querer unir por una valor comun a traves de un Join, 
 en el mundo de SQL Server es similar a un InnerJoin
