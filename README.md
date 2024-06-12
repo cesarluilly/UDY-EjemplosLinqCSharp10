@@ -271,6 +271,10 @@ Agrupamiento por Rango de edad, de rango de edad de 5 en 5
     * ![1718213228378](image/README/1718213228378.png)
     * ![1718212266129](image/README/1718212266129.png)
     * ![1718212373153](image/README/1718212373153.png)
+* Otras formas de hacerlo, es utilizar las mismas instrucciones y solo invertir las tablas
+    * ![1718215533815](image/README/1718215533815.png)
+    * ![1718215665765](image/README/1718215665765.png)
+    * ![1718215684679](image/README/1718215684679.png)
 
 ### Video 32 Join(Inner Join)
 En ocaciones vamos a tener un Join que vamos a querer unir por una valor comun a traves de un Join, 
