@@ -267,7 +267,7 @@ Agrupamiento por Rango de edad, de rango de edad de 5 en 5
     * ![1718212206506](image/README/1718212206506.png)
     * ![1718212360468](image/README/1718212360468.png)
     * 
-* ChatGPT RightJoin (NOTA. En linq no existe Right Join, solo existe el join y el LeftJoin, lo que se esta pretendiendo aqui es invertir el orden simulando que la primera tabla que se establece es la Derecha, pero al final de cuentas estamos haciendo un LeftJoin, y se logra con el DefaultIfEmpty() --> (es la instruccion donde decimos que nos incluya todos los registros de la primera tabla, que es la Left))
+* ChatGPT RightJoin `(NOTA. En linq no existe Right Join, solo existe el join y el LeftJoin, lo que se esta pretendiendo aqui es invertir el orden simulando que la primera tabla que se establece es la Derecha, pero al final de cuentas estamos haciendo un LeftJoin, y se logra con el DefaultIfEmpty() --> (es la instruccion donde decimos que nos incluya todos los registros de la primera tabla, que es la Left))`
     * ![1718213228378](image/README/1718213228378.png)
     * ![1718212266129](image/README/1718212266129.png)
     * ![1718212373153](image/README/1718212373153.png)
